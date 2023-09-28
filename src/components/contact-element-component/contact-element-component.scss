@@ -1,0 +1,14 @@
+.contact {
+    &__element {
+        display: flex;
+    }
+
+    &__icon {
+        margin-right: 8px;
+    }
+}
+
+.small-text-desktop {
+    color: #FFF;
+    line-height: 21px;
+}
