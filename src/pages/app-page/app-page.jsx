@@ -1,10 +1,16 @@
 import './app-page.scss';
+import React from 'react';
+import HeaderComponent from '../../components/header-component/header-component';
+import FooterComponent from '../../components/footer-component/footer-component';
 
-function AppPage() {
+const AppPage = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className='page'>
+      <HeaderComponent />
+      <div className='page__element'>
+        Контент
+      </div>
+      <FooterComponent />
     </div>
   );
 }
