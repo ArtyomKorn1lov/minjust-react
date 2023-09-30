@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const TopMenuComponent = ({list}) => {
     return (
         <div className="menu">
-            {list.map((element, key) => (
-                <a className="menu__item small-text-desktop -menu" href={element.link}>{element.name}</a>
+            {list.map((element, index) => (
+                <a key={index} className="menu__item small-text-desktop -menu" href={element.link}>{element.name}</a>
             ))}
         </div>
     );

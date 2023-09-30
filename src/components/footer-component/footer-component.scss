@@ -1,4 +1,35 @@
 .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #0F1526;
     padding: 15px 255px;
+
+    &__banner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__logo {
+        width: 25px;
+        height: 40px;
+        margin-right: 11px;
+    }
+}
+
+.small-text-desktop {
+    &.-white {
+        line-height: 21px;
+    }
+
+    &.-trademark {
+        color: var(--color-secondary-gray);
+        font-weight: 200;
+    }
 }
