@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+}
+
+.menu + .search__container {
+    margin-left: 140px;
+}
+
+.menu__item + .menu__item {
+    margin-left: 47px;
+}
+
+.small-text-desktop.-menu {
+    text-transform: uppercase;
+    color: var(--color-primary-blue);
+    font-weight: 600;
+}

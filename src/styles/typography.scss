@@ -1,5 +1,5 @@
 .header-first-text-desktop {
-    color: #010032;
+    color: var(--color-secondary-dark-blue);
     font-family: 'Geologica', sans-serif;
     font-size: 50px;
     font-style: normal;
@@ -9,8 +9,8 @@
 }
 
 .header-second-text-desktop {
-    color: #010032;
-    font-family: Geologica;
+    color: var(--color-secondary-dark-blue);
+    font-family: 'Geologica', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
@@ -19,8 +19,8 @@
 }
 
 .header-third-text-desktop {
-    color: #010032;
-    font-family: Geologica;
+    color: var(--color-secondary-dark-blue);
+    font-family: 'Geologica', sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
@@ -29,8 +29,8 @@
 }
 
 .big-text-desktop {
-    color: #010032;
-    font-family: Geologica;
+    color: var(--color-secondary-dark-blue);
+    font-family: 'Geologica', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -39,8 +39,8 @@
 }
 
 .medium-text-desktop {
-    color: #010032;
-    font-family: Geologica;
+    color: var(--color-secondary-dark-blue);
+    font-family: 'Geologica', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -49,8 +49,8 @@
 }
 
 .regular-text-desktop {
-    color: #444;
-    font-family: Geologica;
+    color: var(--color-secondary-very-dark-gray);
+    font-family: 'Geologica', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -58,10 +58,14 @@
 }
 
 .small-text-desktop {
-    color: #444;
-    font-family: Geologica;
+    color: var(--color-secondary-very-dark-gray);
+    font-family: 'Geologica', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
     line-height: 16.8px;
+}
+
+a {
+    text-decoration: none;
 }

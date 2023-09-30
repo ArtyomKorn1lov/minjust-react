@@ -1,7 +1,7 @@
 .header {
     display: flex;
     flex-direction: column;
-    background: #FFFFFF;
+    background: var(--color-secondary-white);
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
 
     &__contacts {
@@ -13,6 +13,58 @@
 
     &__container {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 10px 255px;
     }
+
+    &__banner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 14px;
+    }
+
+    &__banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__menu {
+        display: flex;
+    }
+}
+
+.contacts {
+    &__left {
+        display: flex;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.small-text-desktop {
+    &.-border {
+        font-weight: 600;
+        line-height: 21px;
+    }
+
+    &.-regular {
+        line-height: 21px;
+    }
+}
+
+.search__container {
+    display: flex;
+    align-items: center;
+}
+
+.search__container img + img {
+    margin-left: 20px;
 }

@@ -1,6 +1,7 @@
 .contact {
     &__element {
         display: flex;
+        align-items: center;
     }
 
     &__icon {
@@ -8,7 +9,11 @@
     }
 }
 
-.small-text-desktop {
-    color: #FFF;
-    line-height: 21px;
+.contact__element + .contact__element {
+    margin-left: 95px;
+}
+
+.small-text-desktop.-white {
+    color: var(--color-secondary-white);
+    line-height: 0;
 }
