@@ -25,36 +25,41 @@ const HeaderComponent = () => {
     return (
         <div className='header'>
             <div className="header__contacts">
-                <div className="contacts__left">
-                    <ContactElementComponent type="phone" contactInfo={{
-                        link: "+79876543210",
-                        text: "+ 7 (987) 654 32-10"
-                    }} />
-                    <ContactElementComponent type="phone" contactInfo={{
-                        link: "minust@gov.mari.ru",
-                        text: "minust@gov.mari.ru"
-                    }} />
-                </div>
-                <div className="contacts__right">
-                    <ContactElementComponent type="geodata" contactInfo={{
-                        link: "",
-                        text: "424033, Республика Марий Эл, г. Йошкар-Ола, наб. Брюгге, д. 2"
-                    }} />
-                </div>
-            </div>
-            <div className="header__container">
-                <div className="header__banner">
-                    <img className="header__logo" src={logo} alt="logo" />
-                    <div className="header__banner-text">
-                        <p className="small-text-desktop -border">Портал министерства Юстиций Республики Марий Эл</p>
-                        <p className="small-text-desktop -regular">Официальный портал</p>
+                <div className="header__contacts-section">
+                    <div className="contacts__left">
+                        <ContactElementComponent type="phone" contactInfo={{
+                            link: "+79876543210",
+                            text: "+ 7 (987) 654 32-10"
+                        }} />
+                        <ContactElementComponent type="phone" contactInfo={{
+                            link: "minust@gov.mari.ru",
+                            text: "minust@gov.mari.ru"
+                        }} />
+                    </div>
+                    <div className="contacts__right">
+                        <ContactElementComponent type="geodata" contactInfo={{
+                            link: "",
+                            text: "424033, Республика Марий Эл, г. Йошкар-Ола, наб. Брюгге, д. 2"
+                        }} />
                     </div>
                 </div>
-                <div className="header__menu">
-                    <TopMenuComponent list={menuItems} />
-                    <div className="search__container">
-                        <img src={glasses} alt="glass"/>
-                        <img src={search} alt="search" />
+            </div>
+
+            <div className="header__container">
+                <div className="header__container-section">
+                    <div className="header__banner">
+                        <img className="header__logo" src={logo} alt="logo" />
+                        <div className="header__banner-text">
+                            <p className="small-text-desktop -border">Портал министерства Юстиций Республики Марий Эл</p>
+                            <p className="small-text-desktop -regular">Официальный портал</p>
+                        </div>
+                    </div>
+                    <div className="header__menu">
+                        <TopMenuComponent list={menuItems} />
+                        <div className="search__container">
+                            <img src={glasses} alt="glass" />
+                            <img src={search} alt="search" />
+                        </div>
                     </div>
                 </div>
             </div>

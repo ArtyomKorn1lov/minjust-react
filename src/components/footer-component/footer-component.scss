@@ -1,9 +1,16 @@
 .footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0F1526;
-    padding: 15px 255px;
+    justify-content: center;
+    background: var(--color-primary-dark-blue);
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5px;
+        max-width: 1470px;
+        width: 100%;
+    }
 
     &__banner {
         display: flex;
