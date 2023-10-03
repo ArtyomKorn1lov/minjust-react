@@ -6,7 +6,7 @@
     stroke: var(--color-secondary-very-light-gray);
     width: 330px;
     height: 407px;
-    margin-bottom: 30px;
+    margin: 15px;
 
     &__image {
         cursor: pointer;
@@ -21,10 +21,6 @@
         align-items: start;
         padding: 20px;
     }
-}
-
-.news-item + .news-item {
-    margin-left: 30px;
 }
 
 .small-text-desktop.-news-item-date {
