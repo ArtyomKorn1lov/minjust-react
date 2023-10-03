@@ -5,6 +5,7 @@ import search from "../../assets/search.png";
 import React from 'react';
 import ContactElementComponent from "../contact-element-component/contact-element-component";
 import TopMenuComponent from "../top-menu-component/top-menu-component";
+import { useNavigate } from "react-router-dom";
 
 const HeaderComponent = () => {
     const menuItems = [
@@ -20,7 +21,8 @@ const HeaderComponent = () => {
             link: "",
             name: "Контакты"
         },
-    ]
+    ];
+    const navigate = useNavigate();
 
     return (
         <div className='header'>
@@ -48,7 +50,7 @@ const HeaderComponent = () => {
             <div className="header__container">
                 <div className="header__container-section">
                     <div className="header__banner">
-                        <img className="header__logo" src={logo} alt="logo" />
+                        <img onClick={() => navigate("/")} className="header__logo" src={logo} alt="logo" />
                         <div className="header__banner-text">
                             <p className="small-text-desktop -border">Портал министерства Юстиций Республики Марий Эл</p>
                             <p className="small-text-desktop -regular">Официальный портал</p>
