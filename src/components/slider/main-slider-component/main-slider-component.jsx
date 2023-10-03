@@ -1,12 +1,25 @@
 import "./main-slider-component.scss";
-import slider from "../../../assets/slider_fon.png";
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import PropTypes from 'prop-types';
 
-//TODO запросить помощи у опытного frontend разработчика
-const MainSliderComponent = () => {
+const MainSliderComponent = ({ slides }) => {
     return (
-        <img className="main_slider" src={slider} alt="slide"/>
+        <>
+            <Swiper className="mySwiper">
+                {slides.map((element, index) => (
+                    <SwiperSlide><img src={element.img} alt="slider" /></SwiperSlide>
+                ))}
+            </Swiper>
+        </>
     );
 };
+
+MainSliderComponent.propTypes = {
+    slides: PropTypes.arrayOf(PropTypes.shape({
+        img: PropTypes.string,
+    }))
+}
 
 export default MainSliderComponent;

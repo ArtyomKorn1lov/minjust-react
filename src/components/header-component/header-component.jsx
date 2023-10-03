@@ -9,7 +9,7 @@ import TopMenuComponent from "../top-menu-component/top-menu-component";
 const HeaderComponent = () => {
     const menuItems = [
         {
-            link: "",
+            link: "/news/",
             name: "Новости"
         },
         {

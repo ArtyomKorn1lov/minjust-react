@@ -2,8 +2,9 @@ import './app-page.scss';
 import React from 'react';
 import HeaderComponent from '../../components/header-component/header-component';
 import FooterComponent from '../../components/footer-component/footer-component';
-import MainSliderComponent from '../../components/slider/main-slider-component/main-slider-component';
-import NewsSliderComponent from '../../components/slider/news-slider-component/news-slider-component';
+import { Route, Routes } from 'react-router-dom';
+import MainPage from "../main-page/main-page";
+import NewsPage from '../news-page/news-page';
 
 const AppPage = () => {
 
@@ -11,8 +12,10 @@ const AppPage = () => {
     <div className='page'>
       <HeaderComponent />
       <div className='page__element'>
-        <MainSliderComponent />
-        <NewsSliderComponent />
+        <Routes>
+          <Route path='/' element={<MainPage />} />
+          <Route path='/news/' element={<NewsPage />} />
+        </Routes>
       </div>
       <FooterComponent />
     </div>
