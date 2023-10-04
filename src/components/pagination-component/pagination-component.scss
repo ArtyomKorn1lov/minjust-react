@@ -1,0 +1,18 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__section {
+        display: flex;
+        justify-content: center;
+        max-width: 1470px;
+        width: 100%;
+    }
+
+    &__page-num {
+        border-radius: 8px;
+        border: 1px solid var(--color-primary-blue);
+        background: transparent;
+        text-align: center;
+    }
+}
