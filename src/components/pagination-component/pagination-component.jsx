@@ -11,12 +11,12 @@ const PaginationComponent = () => {
                     <KeyboardArrowLeftIcon sx={{ color: "#FFFFFF" }} />
                 </button>
                 <div className="pagination__page-num">
-                    <p className="small-text-desktop">1</p>
+                    <p className="small-text-desktop -pagination">1</p>
                 </div>
                 <button className="nav-button -pagination">
                     <KeyboardArrowRightIcon sx={{ color: "#FFFFFF" }} />
                 </button>
-                <p className="small-text-desktop">из 24</p>
+                <p className="small-text-desktop -pagination">из 24</p>
             </div>
         </div>
     )

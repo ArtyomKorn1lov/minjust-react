@@ -1,6 +1,7 @@
 import "./news-list-component.scss";
 import React from "react";
 import NewsItemComponent from "../news-item-component/news-item-component";
+import PaginationComponent from "../../pagination-component/pagination-component";
 
 const NewsListComponent = () => {
     return (
@@ -27,6 +28,7 @@ const NewsListComponent = () => {
                     <NewsItemComponent />
                     <NewsItemComponent />
                 </div>
+                <PaginationComponent />
             </div>
         </div>
     );
