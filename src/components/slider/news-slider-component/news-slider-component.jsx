@@ -2,6 +2,7 @@ import "./news-slider-component.scss";
 import NewsItemComponent from "../../news/news-item-component/news-item-component";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import img from "../../../assets/news-item-img.png";
 import React from "react";
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,6 +11,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 //import { Navigation } from 'swiper/modules';
 
 const NewsSliderComponent = () => {
+    const element = {
+        id: 1,
+        name: "Коллегия Министерства внутренней политики Республики Марий Эл",
+        date: "23 июля 2023",
+        img: img
+    }
+
     return (
         <div className="news">
             <div className="news__section">
@@ -41,28 +49,28 @@ const NewsSliderComponent = () => {
                 </div>
                 <Swiper className="mySwiper">
                     <SwiperSlide className="news__list">
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
                     </SwiperSlide>
                     <SwiperSlide className="news__list">
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
                     </SwiperSlide>
                     <SwiperSlide className="news__list">
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
                     </SwiperSlide>
                     <SwiperSlide className="news__list">
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
-                        <NewsItemComponent />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
+                        <NewsItemComponent newItem={element} />
                     </SwiperSlide>
                 </Swiper>
             </div>

@@ -1,15 +1,15 @@
 import "./news-item-component.scss";
-import newsItem from "../../../assets/news-item-img.png";
 import React from "react";
+import PropTypes from 'prop-types';
 
-const NewsItemComponent = () => {
+const NewsItemComponent = ({ newItem }) => {
     return (
         <div className="news-item">
-            <img className="news-item__image" src={newsItem} alt="news" />
+            <img className="news-item__image" src={newItem.img} alt="news" />
             <div className="news-item__info">
-                <p className="small-text-desktop -news-item-date">23 июля 2023</p>
+                <p className="small-text-desktop -news-item-date">{newItem.date}</p>
                 <p className="medium-text-desktop -news-item">
-                    Одной из новых мер государственной поддержки инвестиционной деятельности является соглашение о ...
+                    {newItem.name}
                 </p>
                 <button className="primary-button">
                     Подробнее
@@ -17,6 +17,15 @@ const NewsItemComponent = () => {
             </div>
         </div>
     );
+};
+
+NewsItemComponent.propTypes = {
+    newItem: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        date: PropTypes.string,
+        img: PropTypes.string,
+    })
 };
 
 export default NewsItemComponent;

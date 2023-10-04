@@ -22,7 +22,7 @@ const MainSliderComponent = ({ slides }) => {
                 className="mySwiper"
             >
                 {slides.map((element, index) => (
-                    <SwiperSlide><img src={element.img} alt="slider" /></SwiperSlide>
+                    <SwiperSlide key={index}><img src={element.img} alt="slider" /></SwiperSlide>
                 ))}
             </Swiper>
         </>
