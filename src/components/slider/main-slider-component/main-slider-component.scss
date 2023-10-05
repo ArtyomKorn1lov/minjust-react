@@ -6,10 +6,46 @@
 .swiper-slide {
     background-position: center;
     background-size: cover;
+
+    &__info {
+        position: absolute;
+        top: 20%;
+        left: 255px;
+        max-width: 600px;
+        z-index: 1000;
+    }
+
+    &__button {
+        border-radius: 10px;
+        border: 1px solid var(--color-secondary-light-blue);
+        background: var(--color-secondary-light-blue);
+        color: var(--color-secondary-white);
+        padding: 19px 30px;
+        text-align: center;
+        font-family: 'Geologica', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
 }
 
 .swiper-slide img {
+    position: relative;
     display: block;
     object-fit: cover;
     width: 100%;
+}
+
+.header-first-text-desktop.-slider {
+    color: var(--color-secondary-white);
+    margin-bottom: 25px;
+}
+
+.regular-text-desktop.-slider {
+    color: var(--color-secondary-white);
+    font-weight: 600;
+    margin-bottom: 35px;
 }
