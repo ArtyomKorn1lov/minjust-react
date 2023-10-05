@@ -13,9 +13,18 @@ const MainPage = () => {
     }, []);
 
     const slides = [
-        {img: example1},
-        {img: example2},
-        {img: example3},
+        {
+            img: example1,
+            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus ad aliquid, cumque est ipsum laborum molestiae natus nihil nisi qui sunt veniam voluptates. Aliquid explicabo fugit minima placeat quod."
+        },
+        {
+            img: example2,
+            text: "Взгляните на новые горизонты!"
+        },
+        {
+            img: example3,
+            text: "Расширьте ваши границы"
+        },
     ]
 
     return (

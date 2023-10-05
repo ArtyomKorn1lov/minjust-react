@@ -1,8 +1,11 @@
 import "./news-item-component.scss";
 import React from "react";
 import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
 
 const NewsItemComponent = ({ newItem }) => {
+    const navigate = useNavigate();
+    
     return (
         <div className="news-item">
             <img className="news-item__image" src={newItem.img} alt="news" />
@@ -11,7 +14,7 @@ const NewsItemComponent = ({ newItem }) => {
                 <p className="medium-text-desktop -news-item">
                     {newItem.name}
                 </p>
-                <button className="primary-button">
+                <button onClick={() => navigate(`/news/${newItem.id}/`)} className="primary-button">
                     Подробнее
                 </button>
             </div>

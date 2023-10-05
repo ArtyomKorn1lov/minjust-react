@@ -1,0 +1,36 @@
+.news-detail {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        max-width: 1470px;
+        width: 100%;
+    }
+
+    &__img-left {
+        float: left;
+        margin: 0 30px 30px 0;
+    }
+
+    &__back-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 90px;
+    }
+}
+
+.header-second-text-desktop.-detail {
+    margin-bottom: 45px;
+}
+
+.small-text-desktop.-italic {
+    font-style: italic;
+    float: right;
+}
+
+.regular-text-desktop.-detail {
+    text-align: justify;
+}

@@ -7,8 +7,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import PropTypes from 'prop-types';
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { useNavigate } from "react-router-dom";
 
 const MainSliderComponent = ({ slides }) => {
+    const navigation = useNavigate();
+
     return (
         <>
             <Swiper
@@ -25,8 +28,8 @@ const MainSliderComponent = ({ slides }) => {
                     <SwiperSlide key={index}><img src={element.img} alt="slider" />
                         <div className="swiper-slide__info">
                             <h1 className="header-first-text-desktop -slider">Все новости республики Марий Эл</h1>
-                            <p className="regular-text-desktop -slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus ad aliquid, cumque est ipsum laborum molestiae natus nihil nisi qui sunt veniam voluptates. Aliquid explicabo fugit minima placeat quod.</p>
-                            <button className="swiper-slide__button">
+                            <p className="regular-text-desktop -slider">{element.text}</p>
+                            <button className="swiper-slide__button" onClick={() => navigation("/news/")}>
                                 Перейти
                             </button>
                         </div>
@@ -40,6 +43,7 @@ const MainSliderComponent = ({ slides }) => {
 MainSliderComponent.propTypes = {
     slides: PropTypes.arrayOf(PropTypes.shape({
         img: PropTypes.string,
+        text: PropTypes.string
     }))
 }
 

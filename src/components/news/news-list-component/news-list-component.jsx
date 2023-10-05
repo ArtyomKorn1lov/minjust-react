@@ -32,6 +32,15 @@ const NewsListComponent = forwardRef(({ isMain }, ref) => {
         }
         setMaxPage(newsDemo.length > 0 ? Math.ceil(newsDemo.length / 4) : 1);
         setNews(preparePaginationArray());
+        return () => {
+            setNewsDemo(NewsDemo);
+            setTags(TagsDemo);
+            setTagIndex(0);
+            setNews([]);
+            setPage(0);
+            setPage(1);
+            setMaxPage(1);
+        };
     }, []);
 
     useEffect(() => {
