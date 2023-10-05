@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1470px;
+        width: 100%;
+    }
+
+    &__page-num {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        width: 75px;
+        height: 46px;
+        border: 1px solid var(--color-primary-blue);
+        background: transparent;
+        text-align: center;
+        margin-right: 15px;
+    }
+}
+
+.small-text-desktop.-pagination {
+    font-weight: 700;
+    font-size: 16px;
+} 
