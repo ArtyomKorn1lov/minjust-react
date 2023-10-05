@@ -1,4 +1,3 @@
-import "./main-page.scss";
 import example1 from "../../assets/example_slide.jpg";
 import example2 from "../../assets/example_slide2.jpg";
 import example3 from "../../assets/example_slide3.jpg";

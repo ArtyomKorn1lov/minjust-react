@@ -1,34 +1,56 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./news-list-component.scss";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useState } from "react";
 import NewsItemComponent from "../news-item-component/news-item-component";
 import PaginationComponent from "../../pagination-component/pagination-component";
 import NewsDemo from "../../../news";
 import TagsDemo from "../../../tags";
+import notFound from "../../../assets/not-found-news.png";
+import PropTypes from 'prop-types';
 
-const NewsListComponent = () => {
+const NewsListComponent = forwardRef(({ isMain }, ref) => {
+    const [newsDemo, setNewsDemo] = useState(NewsDemo);
     const [tags, setTags] = useState(TagsDemo);
     const [tagIndex, setTagIndex] = useState(0);
     const [newsList, setNews] = useState([]);
     const [page, setPage] = useState(1);
     const [maxPage, setMaxPage] = useState(1);
 
+    useImperativeHandle(ref, () => ({
+        next() {
+            nextPage();
+        },
+        prev() {
+            prevPage();
+        },
+    }))
+
     useEffect(() => {
-        if (NewsDemo.length <= 4) {
-            setNews(NewsDemo);
+        if (newsDemo.length <= 4) {
+            setNews(newsDemo);
             return;
         }
-        setMaxPage(Math.ceil(NewsDemo.length / 4));
+        setMaxPage(newsDemo.length > 0 ? Math.ceil(newsDemo.length / 4) : 1);
         setNews(preparePaginationArray());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
         setNews(preparePaginationArray());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [page]);
+    }, [page, newsDemo]);
+
+    useEffect(() => {
+        let newArray = NewsDemo;
+        newArray = newArray.filter(el => el.tags.includes(tags[tagIndex].code));
+        newArray.forEach((el, index) => {
+            newArray[index].id = index + 1;
+        });
+        setNewsDemo(newArray);
+        setPage(1);
+        setMaxPage(newArray.length > 0 ? Math.ceil(newArray.length / 4) : 1);
+    }, [tagIndex])
 
     const preparePaginationArray = () => {
-        return NewsDemo.filter(el => el.id > (page - 1) * 4 && el.id <= page * 4);
+        return newsDemo.filter(el => el.id > (page - 1) * 4 && el.id <= page * 4);
     };
 
     const prevPage = useCallback(() => {
@@ -72,20 +94,40 @@ const NewsListComponent = () => {
             )
         }
     });
+
+    let newsClass = "news";
+    if (isMain) {
+        newsClass = newsClass + " -main"
+    }
+    let newsListClass = "news__list";
+    if (newsList.length <= 0) {
+        newsListClass = newsListClass + " -center";
+    }
+    if (newsList.length > 0 && newsList.length < 4) {
+        newsListClass = newsListClass + " -start";
+    }
     return (
-        <div className="news">
+        <div className={newsClass}>
             <div className="news__section">
-                <h2 className="header-second-text-desktop -news">Новости</h2>
+                {!isMain && <h2 className="header-second-text-desktop -news">Новости</h2>}
                 <div className="news__tags">
                     {renderTags.map(el => el)}
                 </div>
-                <div className="news__list">
-                    {newsList.map((el, index) => (<NewsItemComponent key={index} newItem={el} />))}
+                <div className={newsListClass}>
+                    {newsList.length > 0 ? (newsList.map((el, index) => (<NewsItemComponent key={index} newItem={el} />))) :
+                        (<div className="news__not-found">
+                            <img src={notFound} alt="notFound" />
+                            <h1 className="header-first-text-desktop">Новостей по этой теме не найдено</h1>
+                        </div>)}
                 </div>
-                <PaginationComponent page={page} maxPage={maxPage} nextPage={nextPage} prevPage={prevPage} />
+                {!isMain && newsList.length > 0 && <PaginationComponent page={page} maxPage={maxPage} nextPage={nextPage} prevPage={prevPage} />}
             </div>
         </div>
     );
-};
+});
+
+NewsListComponent.propTypes = {
+    isMain: PropTypes.bool
+}
 
 export default NewsListComponent;

@@ -26,20 +26,10 @@
         display: flex;
         margin-bottom: 30px;
     }
-
-    &__list {
-        display: flex;
-        justify-content: start;
-        margin: -15px;
-    }
 }
 
 .header-third-text-desktop.-news {
     font-weight: 600;
-}
-
-.news__nav button+button {
-    margin-left: 20px;
 }
 
 .news__tags .tag-input+.tag-input {

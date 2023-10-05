@@ -1,14 +1,15 @@
-import "./news-page.scss";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import NewsListComponent from "../../components/news/news-list-component/news-list-component";
 
 const NewsPage = () => {
+    const ref = useRef();
+
     useEffect(() => {
         document.title = "Новости";
     }, []);
 
     return (
-        <NewsListComponent />
+        <NewsListComponent ref={ref} isMain={false} />
     );
 }
 
