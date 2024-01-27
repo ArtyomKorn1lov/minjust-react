@@ -1,0 +1,19 @@
+.contact {
+    &__element {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-right: 8px;
+    }
+}
+
+.contact__element + .contact__element {
+    margin-left: 45px;
+}
+
+.small-text-desktop.-white {
+    color: var(--color-secondary-white);
+    line-height: 0;
+}

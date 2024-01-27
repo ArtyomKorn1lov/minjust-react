@@ -1,0 +1,91 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-secondary-white);
+    opacity: 0.9;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+
+    &__contacts {
+        display: flex;
+        justify-content: center;
+        background: #405A9F;
+    }
+
+    &__contacts-section {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1470px;
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1470px;
+        width: 100%;
+        padding: 10px 5px;
+    }
+
+    &__banner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        cursor: pointer;
+        margin-right: 14px;
+    }
+
+    &__banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__menu {
+        display: flex;
+    }
+}
+
+.contacts {
+    &__left {
+        display: flex;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.small-text-desktop {
+    &.-border {
+        font-weight: 600;
+        line-height: 21px;
+    }
+
+    &.-regular {
+        line-height: 21px;
+    }
+}
+
+.search__container {
+    display: flex;
+    align-items: center;
+}
+
+.search__container img + img {
+    margin-left: 20px;
+}

@@ -1,0 +1,44 @@
+.main-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1470px;
+        width: 100%;
+    }
+
+    &__image {
+        margin-right: 120px;
+    }
+
+    &__margin-text {
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid #4175FF;
+        background: #405A9F;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Geologica', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 19px 30px;
+
+        & img {
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background: var(--color-primary-dark-blue);
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5px;
+        max-width: 1470px;
+        width: 100%;
+    }
+
+    &__banner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__logo {
+        cursor: pointer;
+        width: 25px;
+        height: 40px;
+        margin-right: 11px;
+    }
+}
+
+.small-text-desktop {
+    &.-white {
+        line-height: 21px;
+    }
+
+    &.-trademark {
+        color: var(--color-secondary-gray);
+        font-weight: 200;
+    }
+}
